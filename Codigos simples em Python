@@ -1,0 +1,320 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMTuYxgQ7h/tcs8AUVWZcIR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Cesar-Augusto-M/-edaa-lista-quatro-2024/blob/main/Codigos%20simples%20em%20Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "V3wL_exafMIc",
+        "outputId": "ac8fdd4f-dba5-410a-8eed-092db49ceab5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu nome? Cesar\n",
+            "Qual a sua idade? 26\n",
+            "Qual o seu peso (em kg)? 75\n",
+            "Qual a sua altura (em metros)? 175\n",
+            "Você está apto a servir o exército\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Exercicio 1\n",
+        "nome = input(\"Qual o seu nome? \")\n",
+        "idade = int(input(\"Qual a sua idade? \"))\n",
+        "peso = float(input(\"Qual o seu peso (em kg)? \"))\n",
+        "altura = float(input(\"Qual a sua altura (em metros)? \"))\n",
+        "\n",
+        "# Verificação dos requisitos\n",
+        "if idade > 18 and peso >= 60 and altura >= 1.70:\n",
+        "    print(\"Você está apto a servir o exército\")\n",
+        "else:\n",
+        "    print(\"Você não está apto a servir o exército\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 2\n",
+        "frase = \"Anotaram a data da maratona\"\n",
+        "\n",
+        "# Invertendo a frase\n",
+        "frase_invertida = frase[::-1]\n",
+        "\n",
+        "# Imprimindo a frase invertida\n",
+        "print(\"Frase invertida:\", frase_invertida)\n",
+        "\n",
+        "# Verificando se é um palíndromo (ignorar maiúsculas e espaços)\n",
+        "frase_formatada = frase.replace(\" \", \"\").lower()\n",
+        "frase_invertida_formatada = frase_invertida.replace(\" \", \"\").lower()\n",
+        "\n",
+        "if frase_formatada == frase_invertida_formatada:\n",
+        "    print(\"A frase é um palíndromo.\")\n",
+        "else:\n",
+        "    print(\"A frase não é um palíndromo.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FGpy8hCqf5Sg",
+        "outputId": "2e71c8e5-04d7-4e3c-e04c-b641feeaf642"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Frase invertida: anotaram ad atad a maratonA\n",
+            "A frase é um palíndromo.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 3\n",
+        "dias = int(input(\"Dias: \"))\n",
+        "horas = int(input(\"Horas: \"))\n",
+        "minutos = int(input(\"Minutos: \"))\n",
+        "\n",
+        "# Cálculo dos segundos\n",
+        "total_segundos = dias * 86400 + horas * 3600 + minutos * 60\n",
+        "\n",
+        "print(\"Total em segundos:\", total_segundos)\n"
+      ],
+      "metadata": {
+        "id": "LpqCx8q4gXpm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 4\n",
+        "distancia = float(input(\"Digite a distância a percorrer (em km): \"))\n",
+        "velocidade_media = float(input(\"Digite a velocidade média esperada (em km/h): \"))\n",
+        "\n",
+        "# Cálculo do tempo de viagem\n",
+        "tempo_viagem = distancia / velocidade_media\n",
+        "\n",
+        "print(\"Tempo de viagem estimado:\", tempo_viagem, \"horas\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "s9lucW8UjEXD",
+        "outputId": "51df8a78-0b19-4bad-d9de-6752d66c75ec"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a distância a percorrer (em km): 600\n",
+            "Digite a velocidade média esperada (em km/h): 80\n",
+            "Tempo de viagem estimado: 7.5 horas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 5\n",
+        "velocidade = float(input(\"Digite a velocidade do carro (em km/h): \"))\n",
+        "\n",
+        "if velocidade > 80:\n",
+        "    multa = (velocidade - 80) * 5\n",
+        "    print(\"Você foi multado! O valor da multa é de R$\", multa)\n",
+        "else:\n",
+        "    print(\"Velocidade dentro do limite.\")\n"
+      ],
+      "metadata": {
+        "id": "g2-RbLICj7LE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 6\n",
+        "valor_casa = float(input(\"Digite o valor da casa: \"))\n",
+        "salario = float(input(\"Digite o seu salário: \"))\n",
+        "anos = int(input(\"Digite a quantidade de anos a pagar: \"))\n",
+        "\n",
+        "# Calculando o valor da prestação mensal\n",
+        "prestacao_mensal = valor_casa / (anos * 12)\n",
+        "\n",
+        "# Verificação do limite de 30% do salário\n",
+        "if prestacao_mensal <= salario * 0.3:\n",
+        "    print(\"Empréstimo aprovado!\")\n",
+        "else:\n",
+        "    print(\"Empréstimo negado.\")\n"
+      ],
+      "metadata": {
+        "id": "z99xtT3evb-p"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 7\n",
+        "numero = int(input(\"Digite um número para ver sua tabuada: \"))\n",
+        "\n",
+        "print(f\"Tabuada do {numero} de 0 a 9\")\n",
+        "for i in range(10):\n",
+        "    print(f\"{numero} X {i} = {numero * i}\")\n"
+      ],
+      "metadata": {
+        "id": "RdqTSJnovert"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 8\n",
+        "dividendo = int(input(\"Digite o dividendo: \"))\n",
+        "divisor = int(input(\"Digite o divisor: \"))\n",
+        "\n",
+        "resto = dividendo\n",
+        "while resto >= divisor:\n",
+        "    resto -= divisor\n",
+        "\n",
+        "print(\"O resto da divisão é:\", resto)\n"
+      ],
+      "metadata": {
+        "id": "7iIdRKsJvljn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 9\n",
+        "lado1 = int(input(\"Digite o comprimento do primeiro lado: \"))\n",
+        "lado2 = int(input(\"Digite o comprimento do segundo lado: \"))\n",
+        "lado3 = int(input(\"Digite o comprimento do terceiro lado: \"))\n",
+        "\n",
+        "if lado1 == lado2 == lado3:\n",
+        "    print(\"Triângulo equilátero\")\n",
+        "elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:\n",
+        "    print(\"Triângulo isósceles\")\n",
+        "else:\n",
+        "    print(\"Triângulo escaleno\")\n"
+      ],
+      "metadata": {
+        "id": "To9h1c-fvoi5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 10\n",
+        "numero = int(input(\"Digite um número inteiro: \"))\n",
+        "numero_invertido = int(str(numero)[::-1])\n",
+        "\n",
+        "print(\"Número invertido:\", numero_invertido)\n"
+      ],
+      "metadata": {
+        "id": "mIRpkj22vsy7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 11\n",
+        "frase = input(\"Digite uma frase: \")\n",
+        "vogais = \"aeiouAEIOU\"\n",
+        "contador_vogais = sum(1 for letra in frase if letra in vogais)\n",
+        "\n",
+        "print(f\"A frase tem {contador_vogais} vogais.\")\n"
+      ],
+      "metadata": {
+        "id": "78gP9uuVv2mF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 12\n",
+        "lista = [2, 7, 7, 7, '#', '#', '#', '@', 3, '#', 6]\n",
+        "mais_frequente = max(set(lista), key=lista.count)\n",
+        "frequencia = lista.count(mais_frequente)\n",
+        "\n",
+        "print(f\"O item mais frequente é '{mais_frequente}' e aparece {frequencia} vezes.\")\n"
+      ],
+      "metadata": {
+        "id": "SLaBd6eYv5XT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 13\n",
+        "palavra = input(\"Digite uma palavra: \")\n",
+        "palavra_invertida = palavra[::-1]\n",
+        "\n",
+        "if palavra.lower() == palavra_invertida.lower():\n",
+        "    print(f\"{palavra} é um palíndromo\")\n",
+        "else:\n",
+        "    print(f\"{palavra} não é um palíndromo\")\n"
+      ],
+      "metadata": {
+        "id": "85Stt-pXwCNl"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
